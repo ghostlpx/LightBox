@@ -1,0 +1,87 @@
+/* 样式重置 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+	margin:0; 
+	padding:0;
+}
+table{ border-collapse: collapse; border-spacing: 0; }
+fieldset,img{ border:0; }
+address,caption,cite,code,dfn,strong,th,var{ font-style: normal; font-weight: normal; }
+ol,ul{ list-style: none; }
+caption,th{ text-align: left; }
+h1,h2,h3,h4,h5,h6{ font-size: 100%; font-weight: normal; }
+q:before,q:after{ content:; }
+body{ font:12px/1.5 '微软雅黑'; }
+.clearfix:after{ visibility: hidden; display: block; content:"", clear:both; height: 0; }
+.clearfix:{ zoom:1; }
+.text-ellipsis{ white-space: nowrap;/* 设置不折行 */ text-overflow: ellipsis; overflow: hidden; }
+
+/* lightbox图片画廊样式 */
+#G-lightbox-mask{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.5; filter: alpha(opacity=50);
+	z-index: 999;
+	display: none;
+}
+#G-lightbox-popup{
+	position: fixed;
+	left: 50%;
+	top: 0;
+	z-index: 1000;
+	display: none;
+	background: #fff;
+}
+#G-lightbox-popup .lightbox-pic-view{
+	position: relative;
+	border: 5px solid #fff;
+	border-radius: 3px;
+	overflow: hidden;
+	background: url(icon/loading.gif) no-repeat center center;
+}
+#G-lightbox-popup .lightbox-pic-view .lightbox-btn{
+	position: absolute;
+	top: 0;
+	width: 40%;
+	height: 100%;
+	z-index: 1;
+	/* 兼容IE浏览器：IE下DOM节点要有背景颜色或背景图片才能绑定事件 */
+	background: url(icon/transparent.png) repeat left top; 
+}
+#G-lightbox-popup .lightbox-pic-view .lightbox-prev-btn{ left: 0; }
+#G-lightbox-popup .lightbox-pic-view .lightbox-next-btn{ right: 0; }
+#G-lightbox-popup .lightbox-pic-view .lightbox-prev-btn-show{
+	background: url(icon/prev.png) no-repeat left center; 
+	cursor: pointer;
+}
+#G-lightbox-popup .lightbox-pic-view .lightbox-next-btn-show{
+	background: url(icon/next.png) no-repeat right center; 
+	cursor: pointer;
+}
+#G-lightbox-popup .lightbox-pic-view .lightbox-image{ display: block; }
+
+#G-lightbox-popup .lightbox-pic-caption{
+	position: relative; 
+	z-index: 2; 
+	margin:0 5px; 
+	margin-top: -60px; 
+	background: rgba(0,0,0,0.5);
+	background: url(icon/opacity.png) repeat left top; /* 兼容IE浏览器：添加半透明图片作为背景 */
+}
+#G-lightbox-popup .lightbox-pic-caption .lightbox-caption-area{ 
+	padding: 10px 5px; 
+	color: #fff; }
+#G-lightbox-popup .lightbox-pic-caption .lightbox-caption-area .lightbox-of-index{ 
+	color: #ddd; }
+#G-lightbox-popup .lightbox-pic-caption .lightbox-close-btn{
+	position: absolute; 
+	right: 10px; 
+	top: 13px; 
+	width: 27px; 
+	height: 27px;
+	background: url(icon/close.png) no-repeat center center; 
+	cursor: pointer;
+}
