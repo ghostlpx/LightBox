@@ -163,7 +163,7 @@
 
 				//拿到图片的宽和高以备使用
 				var picWidth = self.popupPic.width(),
-					picHeight = self.popupPic.height();
+				    picHeight = self.popupPic.height();
 
 				//根据图片的宽和高进行改变，从开始的各占视口宽高的一半到图片的真实宽高
 				self.changePic(picWidth, picHeight);
@@ -236,7 +236,7 @@
 			this.popupMask.fadeIn();
 
 			var winWidth = /*$(window).width()*/this.opts.maxWidth,
-				winHeight = /*$(window).height()*/this.opts.maxHeight;
+			    winHeight = /*$(window).height()*/this.opts.maxHeight;
 
 			//设置图片区域的宽高为可视区宽高的一半
 			this.picViewArea.css({
